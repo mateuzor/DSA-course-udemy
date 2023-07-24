@@ -7,16 +7,16 @@ test("test head", () => {
 });
 
 test("test tail", () => {
-  const head = myLinkedList.getTail();
-  expect(head).toEqual(4);
+  const tail = myLinkedList.getTail();
+  expect(tail).toEqual(4);
 });
 
-test("test tail", () => {
-  const head = myLinkedList.getLength();
-  expect(head).toEqual(1);
+test("test length", () => {
+  const length = myLinkedList.getLength();
+  expect(length).toEqual(1);
 });
 
 test("test Linked List", () => {
-  const head = myLinkedList.printList();
-  expect(head).toEqual(4);
+  const listPrint = myLinkedList.printList();
+  expect(listPrint).toEqual(4);
 });
