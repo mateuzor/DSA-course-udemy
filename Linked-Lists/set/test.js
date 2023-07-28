@@ -1,6 +1,6 @@
 const LinkedList = require("./solution");
 
-test("test should return false for not existing index", () => {
+test("test should return false for no existing index", () => {
   let myLinkedList = new LinkedList(0);
   myLinkedList.push(1);
   myLinkedList.push(2);
@@ -11,11 +11,12 @@ test("test should return false for not existing index", () => {
   expect(resultTwo).toEqual(false);
 });
 
-test("test should return true if the value is set", () => {
+test("test should return list with the new value on the correct index", () => {
   let myLinkedList = new LinkedList(0);
   myLinkedList.push(1);
   myLinkedList.push(2);
   myLinkedList.push(5);
-  const result = myLinkedList.set(1, 45);
-  expect(result).toEqual(true);
+  myLinkedList.set(1, 45);
+  const list = myLinkedList.printList();
+  expect(list).toEqual([0, 45, 2, 5]);
 });
