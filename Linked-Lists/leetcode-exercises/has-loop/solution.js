@@ -66,7 +66,21 @@ class LinkedList {
     return this;
   }
 
-  hasLoop() {}
+  hasLoop() {
+    let slow = this.head;
+    let fast = this.head;
+
+    while (fast !== null && fast.next !== null) {
+      slow = slow.next;
+      fast = fast.next.next;
+
+      if (slow === fast) {
+        return true; // Loop detected
+      }
+    }
+
+    return false; // No loop found
+  }
 }
 
 module.exports = LinkedList;
